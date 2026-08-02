@@ -432,34 +432,7 @@
 
     // Default sample data (40 data untuk demo pagination)
     function generateSampleData() {
-        const samples = [];
-        const activities = [
-            'Membuka ruangan, mengecek kelengkapan administrasi harian.',
-            'Mengikuti rapat koordinasi persiapan ujian semester di ruang guru.',
-            'Melayani perpanjangan buku perpustakaan (3 siswa).',
-            'Pengecekan inventaris lab komputer (unit 5-8 rusak).',
-            'Menginput nilai rapor ke aplikasi Dapodik.',
-            'Menyusun laporan bulanan untuk kepala sekolah.',
-            'Memperbaiki jaringan internet di ruang guru.',
-            'Mendampingi siswa lomba di tingkat kabupaten.',
-            'Membersihkan dan merawat alat laboratorium biologi.',
-            'Mengarsipkan surat masuk dan surat keluar.'
-        ];
-        const docs = ['-', 'Foto rapat', 'Dokumentasi kegiatan', 'Foto kerusakan', 'Lampiran surat'];
-        
-        for (let i = 0; i < 40; i++) {
-            const d = new Date(2026, 7, 2 + i % 10);
-            const tanggal = d.toISOString().split('T')[0];
-            const jam = String(7 + (i % 8)).padStart(2,'0') + ':00 - ' + String(8 + (i % 8)).padStart(2,'0') + ':00';
-            samples.push({
-                id: nextId++,
-                tanggal: tanggal,
-                jam: jam,
-                kegiatan: activities[i % activities.length] + (i % 3 === 0 ? ' (catatan tambahan)' : ''),
-                dokumentasi: docs[i % docs.length]
-            });
-        }
-        return samples;
+        return [];
     }
 
     // ========== INIT ==========
